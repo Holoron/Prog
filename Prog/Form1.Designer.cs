@@ -38,19 +38,19 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Reg = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.sqlData = new Prog.sqlData();
+            this.sqlDataSet = new Prog.sqlDataSet();
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTableAdapter = new Prog.sqlDataTableAdapters.UserTableAdapter();
-            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idroleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateregistrationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotouserDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.userTableAdapter = new Prog.sqlDataSetTableAdapters.UserTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sqlData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,14 +135,14 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iduserDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.idroleDataGridViewTextBoxColumn,
-            this.dateregistrationDataGridViewTextBoxColumn,
-            this.telephoneDataGridViewTextBoxColumn,
-            this.nameuserDataGridViewTextBoxColumn,
-            this.fotouserDataGridViewImageColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewImageColumn1});
             this.dataGridView1.DataSource = this.userBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(20, 216);
             this.dataGridView1.Name = "dataGridView1";
@@ -151,75 +151,75 @@
             this.dataGridView1.Size = new System.Drawing.Size(190, 105);
             this.dataGridView1.TabIndex = 8;
             // 
-            // sqlData
+            // sqlDataSet
             // 
-            this.sqlData.DataSetName = "sqlData";
-            this.sqlData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.sqlDataSet.DataSetName = "sqlDataSet";
+            this.sqlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // userBindingSource
             // 
             this.userBindingSource.DataMember = "User";
-            this.userBindingSource.DataSource = this.sqlData;
+            this.userBindingSource.DataSource = this.sqlDataSet;
             // 
             // userTableAdapter
             // 
             this.userTableAdapter.ClearBeforeFill = true;
             // 
-            // iduserDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
-            this.iduserDataGridViewTextBoxColumn.HeaderText = "id_user";
-            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
-            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_user";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_user";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // emailDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // passwordDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Password";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // idroleDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.idroleDataGridViewTextBoxColumn.DataPropertyName = "id_role";
-            this.idroleDataGridViewTextBoxColumn.HeaderText = "id_role";
-            this.idroleDataGridViewTextBoxColumn.Name = "idroleDataGridViewTextBoxColumn";
-            this.idroleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "id_role";
+            this.dataGridViewTextBoxColumn4.HeaderText = "id_role";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dateregistrationDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.dateregistrationDataGridViewTextBoxColumn.DataPropertyName = "Date_registration";
-            this.dateregistrationDataGridViewTextBoxColumn.HeaderText = "Date_registration";
-            this.dateregistrationDataGridViewTextBoxColumn.Name = "dateregistrationDataGridViewTextBoxColumn";
-            this.dateregistrationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Date_registration";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Date_registration";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // telephoneDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
-            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
-            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Telephone";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Telephone";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // nameuserDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn7
             // 
-            this.nameuserDataGridViewTextBoxColumn.DataPropertyName = "Name_user";
-            this.nameuserDataGridViewTextBoxColumn.HeaderText = "Name_user";
-            this.nameuserDataGridViewTextBoxColumn.Name = "nameuserDataGridViewTextBoxColumn";
-            this.nameuserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Name_user";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Name_user";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // fotouserDataGridViewImageColumn
+            // dataGridViewImageColumn1
             // 
-            this.fotouserDataGridViewImageColumn.DataPropertyName = "Foto_user";
-            this.fotouserDataGridViewImageColumn.HeaderText = "Foto_user";
-            this.fotouserDataGridViewImageColumn.Name = "fotouserDataGridViewImageColumn";
-            this.fotouserDataGridViewImageColumn.ReadOnly = true;
+            this.dataGridViewImageColumn1.DataPropertyName = "Foto_user";
+            this.dataGridViewImageColumn1.HeaderText = "Foto_user";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             // 
             // Form1
             // 
@@ -241,7 +241,7 @@
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sqlData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -259,9 +259,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button Reg;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private sqlData sqlData;
-        private System.Windows.Forms.BindingSource userBindingSource;
-        private sqlDataTableAdapters.UserTableAdapter userTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
@@ -270,6 +267,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameuserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn fotouserDataGridViewImageColumn;
+        private sqlDataSet sqlDataSet;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private sqlDataSetTableAdapters.UserTableAdapter userTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }
 
