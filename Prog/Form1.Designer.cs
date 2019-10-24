@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Aunth = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -36,6 +37,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Reg = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sqlData = new Prog.sqlData();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userTableAdapter = new Prog.sqlDataTableAdapters.UserTableAdapter();
+            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idroleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateregistrationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotouserDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Aunth
@@ -46,6 +62,7 @@
             this.Aunth.TabIndex = 0;
             this.Aunth.Text = "Авторизироваться";
             this.Aunth.UseVisualStyleBackColor = true;
+            this.Aunth.Click += new System.EventHandler(this.Aunth_Click);
             // 
             // textBox1
             // 
@@ -113,12 +130,104 @@
             this.Reg.Text = "Регистрация";
             this.Reg.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iduserDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn,
+            this.idroleDataGridViewTextBoxColumn,
+            this.dateregistrationDataGridViewTextBoxColumn,
+            this.telephoneDataGridViewTextBoxColumn,
+            this.nameuserDataGridViewTextBoxColumn,
+            this.fotouserDataGridViewImageColumn});
+            this.dataGridView1.DataSource = this.userBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 216);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(190, 105);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // sqlData
+            // 
+            this.sqlData.DataSetName = "sqlData";
+            this.sqlData.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userBindingSource
+            // 
+            this.userBindingSource.DataMember = "User";
+            this.userBindingSource.DataSource = this.sqlData;
+            // 
+            // userTableAdapter
+            // 
+            this.userTableAdapter.ClearBeforeFill = true;
+            // 
+            // iduserDataGridViewTextBoxColumn
+            // 
+            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
+            this.iduserDataGridViewTextBoxColumn.HeaderText = "id_user";
+            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
+            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idroleDataGridViewTextBoxColumn
+            // 
+            this.idroleDataGridViewTextBoxColumn.DataPropertyName = "id_role";
+            this.idroleDataGridViewTextBoxColumn.HeaderText = "id_role";
+            this.idroleDataGridViewTextBoxColumn.Name = "idroleDataGridViewTextBoxColumn";
+            this.idroleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dateregistrationDataGridViewTextBoxColumn
+            // 
+            this.dateregistrationDataGridViewTextBoxColumn.DataPropertyName = "Date_registration";
+            this.dateregistrationDataGridViewTextBoxColumn.HeaderText = "Date_registration";
+            this.dateregistrationDataGridViewTextBoxColumn.Name = "dateregistrationDataGridViewTextBoxColumn";
+            this.dateregistrationDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telephoneDataGridViewTextBoxColumn
+            // 
+            this.telephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.HeaderText = "Telephone";
+            this.telephoneDataGridViewTextBoxColumn.Name = "telephoneDataGridViewTextBoxColumn";
+            this.telephoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameuserDataGridViewTextBoxColumn
+            // 
+            this.nameuserDataGridViewTextBoxColumn.DataPropertyName = "Name_user";
+            this.nameuserDataGridViewTextBoxColumn.HeaderText = "Name_user";
+            this.nameuserDataGridViewTextBoxColumn.Name = "nameuserDataGridViewTextBoxColumn";
+            this.nameuserDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fotouserDataGridViewImageColumn
+            // 
+            this.fotouserDataGridViewImageColumn.DataPropertyName = "Foto_user";
+            this.fotouserDataGridViewImageColumn.HeaderText = "Foto_user";
+            this.fotouserDataGridViewImageColumn.Name = "fotouserDataGridViewImageColumn";
+            this.fotouserDataGridViewImageColumn.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(230, 367);
+            this.ClientSize = new System.Drawing.Size(230, 333);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Reg);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
@@ -130,6 +239,10 @@
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +258,18 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button Reg;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private sqlData sqlData;
+        private System.Windows.Forms.BindingSource userBindingSource;
+        private sqlDataTableAdapters.UserTableAdapter userTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idroleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateregistrationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telephoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameuserDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn fotouserDataGridViewImageColumn;
     }
 }
 
