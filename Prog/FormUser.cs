@@ -12,14 +12,19 @@ namespace Prog
 {
     public partial class FormUser : Form
     {
+        int id;
         public FormUser()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        public FormUser(int x)
         {
+            id = x;
+            InitializeComponent();
+        }
 
+        private void FormUser_Load(object sender, EventArgs e)
+        { 
         }
     }
 }

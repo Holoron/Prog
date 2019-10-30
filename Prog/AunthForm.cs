@@ -35,6 +35,15 @@ namespace Prog
             string pass = TBPass.Text;
             bool login = false;
             int i;
+            if (TBEmail==null)
+            {
+                MessageBox.Show("Не введена почта");
+            }
+            if (TBPass == null)
+            {
+                MessageBox.Show("Не введен пароль");
+            }
+
 
             for (i = 0; i < Users.RowCount; i++)
             {
@@ -50,13 +59,21 @@ namespace Prog
                 }
             }
 
+            if (login == false)
+            {
+                MessageBox.Show("Не верный пользователь");
+            }
+
+
+
             if (login == true)
             {
                 int role = Convert.ToInt16(Users[3, i].Value);
+                int userid = Convert.ToInt16(Users[0, i].Value);
                 switch (role)
                 {
                     case 1: {
-                            FormUser FU = new FormUser();
+                            FormUser FU = new FormUser(userid);
                             this.Hide();
                             FU.ShowDialog();
                             this.Show();
@@ -64,7 +81,7 @@ namespace Prog
                         break;
                     case 2:
                         {
-                            Realtor FU = new Realtor();
+                            Realtor FU = new Realtor(userid);
                             this.Hide();
                             FU.ShowDialog();
                             this.Show();
@@ -72,7 +89,7 @@ namespace Prog
                         break;
                     case 3:
                         {
-                            FormAdmin FU = new FormAdmin();
+                            FormAdmin FU = new FormAdmin(userid);
                             this.Hide();
                             FU.ShowDialog();
                             this.Show();

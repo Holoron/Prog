@@ -59,7 +59,7 @@
             this.Aunth.Location = new System.Drawing.Point(20, 147);
             this.Aunth.Name = "Aunth";
             this.Aunth.Size = new System.Drawing.Size(190, 23);
-            this.Aunth.TabIndex = 0;
+            this.Aunth.TabIndex = 3;
             this.Aunth.Text = "Авторизироваться";
             this.Aunth.UseVisualStyleBackColor = true;
             this.Aunth.Click += new System.EventHandler(this.Aunth_Click);
@@ -69,14 +69,14 @@
             this.TBPass.Location = new System.Drawing.Point(20, 121);
             this.TBPass.Name = "TBPass";
             this.TBPass.Size = new System.Drawing.Size(190, 20);
-            this.TBPass.TabIndex = 1;
+            this.TBPass.TabIndex = 2;
             // 
             // TBEmail
             // 
             this.TBEmail.Location = new System.Drawing.Point(20, 77);
             this.TBEmail.Name = "TBEmail";
             this.TBEmail.Size = new System.Drawing.Size(190, 20);
-            this.TBEmail.TabIndex = 2;
+            this.TBEmail.TabIndex = 1;
             // 
             // label1
             // 
@@ -117,7 +117,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(131, 105);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(79, 13);
-            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Забыл пароль";
             // 
@@ -126,7 +126,7 @@
             this.Reg.Location = new System.Drawing.Point(20, 176);
             this.Reg.Name = "Reg";
             this.Reg.Size = new System.Drawing.Size(190, 23);
-            this.Reg.TabIndex = 7;
+            this.Reg.TabIndex = 4;
             this.Reg.Text = "Регистрация";
             this.Reg.UseVisualStyleBackColor = true;
             // 
@@ -226,7 +226,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(224, 212);
+            this.ClientSize = new System.Drawing.Size(224, 345);
             this.Controls.Add(this.Users);
             this.Controls.Add(this.Reg);
             this.Controls.Add(this.linkLabel1);

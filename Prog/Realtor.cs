@@ -12,9 +12,15 @@ namespace Prog
 {
     public partial class Realtor : Form
     {
+        int id;
         public Realtor()
         {
             InitializeComponent();
+        }
+        public Realtor(int x)
+        {
+            InitializeComponent();
+            id = x;
         }
     }
 }
