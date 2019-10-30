@@ -1750,7 +1750,7 @@ namespace Prog {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public UserRow AddUserRow(RealtorRow parentRealtorRowByRealtorUser, string Email, string Password, RolesRow parentRolesRowByRolesUser, System.DateTime Date_registration, int Telephone, string Name_user, byte[] Foto_user) {
+            public UserRow AddUserRow(RealtorRow parentRealtorRowByRealtorUser, string Email, string Password, RolesRow parentRolesRowByRolesUser, System.DateTime Date_registration, string Telephone, string Name_user, byte[] Foto_user) {
                 UserRow rowUserRow = ((UserRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1819,7 +1819,7 @@ namespace Prog {
                 base.Columns.Add(this.columnid_role);
                 this.columnDate_registration = new global::System.Data.DataColumn("Date_registration", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate_registration);
-                this.columnTelephone = new global::System.Data.DataColumn("Telephone", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnTelephone = new global::System.Data.DataColumn("Telephone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTelephone);
                 this.columnName_user = new global::System.Data.DataColumn("Name_user", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName_user);
@@ -2432,10 +2432,10 @@ namespace Prog {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Telephone {
+            public string Telephone {
                 get {
                     try {
-                        return ((int)(this[this.tableUser.TelephoneColumn]));
+                        return ((string)(this[this.tableUser.TelephoneColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'Telephone\' в таблице \'User\' равно DBNull.", e);
