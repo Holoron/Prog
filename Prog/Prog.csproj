@@ -46,31 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AunthForm.cs">
+    <Compile Include="Log\AunthForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AunthForm.Designer.cs">
+    <Compile Include="Log\AunthForm.Designer.cs">
       <DependentUpon>AunthForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAdmin.cs">
+    <Compile Include="Profile\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAdmin.Designer.cs">
+    <Compile Include="Profile\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUser.cs">
+    <Compile Include="Profile\FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUser.Designer.cs">
+    <Compile Include="Profile\FormUser.Designer.cs">
       <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Realtor.cs">
+    <Compile Include="Profile\Realtor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Realtor.Designer.cs">
+    <Compile Include="Profile\Realtor.Designer.cs">
       <DependentUpon>Realtor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\Reg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log\Reg.Designer.cs">
+      <DependentUpon>Reg.cs</DependentUpon>
     </Compile>
     <Compile Include="sqlDataSet.cs">
       <DependentUpon>sqlDataSet.xsd</DependentUpon>
@@ -80,13 +86,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sqlDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AunthForm.resx">
+    <EmbeddedResource Include="Log\AunthForm.resx">
       <DependentUpon>AunthForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAdmin.resx">
+    <EmbeddedResource Include="Log\Reg.resx">
+      <DependentUpon>Reg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile\FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUser.resx">
+    <EmbeddedResource Include="Profile\FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -98,7 +107,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Realtor.resx">
+    <EmbeddedResource Include="Profile\Realtor.resx">
       <DependentUpon>Realtor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
