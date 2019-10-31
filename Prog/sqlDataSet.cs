@@ -16,3 +16,10 @@ namespace Prog {
     public partial class sqlDataSet {
     }
 }
+
+namespace Prog.sqlDataSetTableAdapters {
+    
+    
+    public partial class UserTableAdapter {
+    }
+}

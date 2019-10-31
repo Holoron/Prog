@@ -30,49 +30,39 @@ namespace Prog
 
         private void Aunth_Click(object sender, EventArgs e)
         {
-
             string email = TBEmail.Text;
             string pass = TBPass.Text;
+            //DataTable TB = new DataTable();
+            //TB.Columns.Add("id");
+            //TB.Columns.Add("Email");
+            //TB.Columns.Add("Password");
+            //TB.Columns.Add("id_role");
+            LoginList.DataSource = userTableAdapter.GetDateUser(email, pass);
+
+
+
             bool login = false;
             int i;
-            if (TBEmail==null)
+            if (TBEmail == null)
             {
                 MessageBox.Show("Не введена почта");
+                return;
             }
             if (TBPass == null)
             {
                 MessageBox.Show("Не введен пароль");
+                return;
             }
 
 
-            for (i = 0; i < Users.RowCount; i++)
+            if(LoginList.RowCount == 1)
             {
-                string DefEmail = Convert.ToString(Users[1, i].Value);
-                string DefPass = Convert.ToString(Users[2, i].Value);
-                if (email==DefEmail)
-                {
-                    if(pass==DefPass)
-                    {
-                        login = true;
-                        break;
-                    }
-                }
-            }
-
-            if (login == false)
-            {
-                MessageBox.Show("Не верный пользователь");
-            }
-
-
-
-            if (login == true)
-            {
-                int role = Convert.ToInt16(Users[3, i].Value);
-                int userid = Convert.ToInt16(Users[0, i].Value);
+                int role = Convert.ToInt16(LoginList[3, 0].Value);
+                int userid = Convert.ToInt16(LoginList[0, 0].Value);
                 switch (role)
                 {
-                    case 1: {
+                    case 1:
+                        {
                             FormUser FU = new FormUser(userid);
                             this.Hide();
                             FU.ShowDialog();
@@ -100,6 +90,11 @@ namespace Prog
                     default:
                         break;
                 }
+            }
+            else
+            {
+                MessageBox.Show("Такого пользователя нет, зарегистрируйтесь");
+                return;
             }
         }
     }

@@ -130,6 +130,7 @@
             this.Controls.Add(this.v);
             this.Controls.Add(this.label1);
             this.Name = "FormAdmin";
+            this.ShowIcon = false;
             this.Text = "Админ";
             this.Load += new System.EventHandler(this.FormAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet)).EndInit();
