@@ -19,7 +19,7 @@ namespace Prog
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sqlDataSet.User". При необходимости она может быть перемещена или удалена.
+
             this.userTableAdapter.Fill(this.sqlDataSet.User);
             this.BackColor = Color.FromArgb(0x6d, 0x6d, 0x6d);
             this.ShowIcon = false;
@@ -100,6 +100,7 @@ namespace Prog
             this.Hide();
             registr.ShowDialog();
             this.Show();
+            this.userTableAdapter.Fill(this.sqlDataSet.User);
 
 
         }

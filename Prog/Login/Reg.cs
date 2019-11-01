@@ -26,7 +26,24 @@ namespace Prog
 
         private void Regis_Click(object sender, EventArgs e)
         {
-            //aa
+
+            string email = TBEmail.Text;
+            string pass = TBPass.Text;
+            int Pref = CBPref.SelectedIndex;
+            string Phone = Convert.ToString(TBPhone.Text);
+            string Name = TBName.Text;
+
+
+            var Ema = UserTA.Email(sqlDataSet1.User, email);
+            var em 
+
+            UserTA.InserUser(email, pass, Pref, DateTime.Now, Phone, Name);
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

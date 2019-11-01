@@ -41,7 +41,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Regis = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UserTA = new Prog.sqlDataSetTableAdapters.UserTableAdapter();
+            this.sqlDataSet1 = new Prog.sqlDataSet();
+            this.LoginList = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginList)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,6 +109,9 @@
             // CBPref
             // 
             this.CBPref.FormattingEnabled = true;
+            this.CBPref.Items.AddRange(new object[] {
+            "Покупатель",
+            "Риэлтор"});
             this.CBPref.Location = new System.Drawing.Point(156, 118);
             this.CBPref.Name = "CBPref";
             this.CBPref.Size = new System.Drawing.Size(190, 21);
@@ -164,23 +171,37 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Назад";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // UserTA
             // 
-            this.button2.Location = new System.Drawing.Point(297, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Зарегистрироваться";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UserTA.ClearBeforeFill = true;
+            // 
+            // sqlDataSet1
+            // 
+            this.sqlDataSet1.DataSetName = "sqlDataSet";
+            this.sqlDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // LoginList
+            // 
+            this.LoginList.AllowUserToAddRows = false;
+            this.LoginList.AllowUserToDeleteRows = false;
+            this.LoginList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LoginList.Location = new System.Drawing.Point(452, 53);
+            this.LoginList.Name = "LoginList";
+            this.LoginList.ReadOnly = true;
+            this.LoginList.RowHeadersVisible = false;
+            this.LoginList.Size = new System.Drawing.Size(190, 167);
+            this.LoginList.TabIndex = 18;
+            this.LoginList.Visible = false;
             // 
             // Reg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(433, 270);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(745, 270);
+            this.Controls.Add(this.LoginList);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Regis);
             this.Controls.Add(this.label6);
@@ -197,6 +218,8 @@
             this.Name = "Reg";
             this.Text = "Reg";
             this.Load += new System.EventHandler(this.Reg_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +240,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Regis;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private sqlDataSetTableAdapters.UserTableAdapter UserTA;
+        private sqlDataSet sqlDataSet1;
+        private System.Windows.Forms.DataGridView LoginList;
     }
 }
