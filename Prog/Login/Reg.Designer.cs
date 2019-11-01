@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CBPref = new System.Windows.Forms.ComboBox();
-            this.TBPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TBName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.UserTA = new Prog.sqlDataSetTableAdapters.UserTableAdapter();
             this.sqlDataSet1 = new Prog.sqlDataSet();
             this.LoginList = new System.Windows.Forms.DataGridView();
+            this.TBPhone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginList)).BeginInit();
             this.SuspendLayout();
@@ -116,13 +116,7 @@
             this.CBPref.Name = "CBPref";
             this.CBPref.Size = new System.Drawing.Size(190, 21);
             this.CBPref.TabIndex = 11;
-            // 
-            // TBPhone
-            // 
-            this.TBPhone.Location = new System.Drawing.Point(156, 145);
-            this.TBPhone.Name = "TBPhone";
-            this.TBPhone.Size = new System.Drawing.Size(190, 20);
-            this.TBPhone.TabIndex = 12;
+            this.CBPref.Text = "Покупатель";
             // 
             // label5
             // 
@@ -193,20 +187,29 @@
             this.LoginList.RowHeadersVisible = false;
             this.LoginList.Size = new System.Drawing.Size(190, 167);
             this.LoginList.TabIndex = 18;
+            this.LoginList.Visible = false;
+            // 
+            // TBPhone
+            // 
+            this.TBPhone.Location = new System.Drawing.Point(156, 145);
+            this.TBPhone.Mask = "0000000000";
+            this.TBPhone.Name = "TBPhone";
+            this.TBPhone.Size = new System.Drawing.Size(190, 20);
+            this.TBPhone.TabIndex = 19;
             // 
             // Reg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(745, 270);
+            this.ClientSize = new System.Drawing.Size(439, 270);
+            this.Controls.Add(this.TBPhone);
             this.Controls.Add(this.LoginList);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Regis);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TBName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.TBPhone);
             this.Controls.Add(this.CBPref);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -215,7 +218,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Reg";
-            this.Text = "Reg";
+            this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Reg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginList)).EndInit();
@@ -233,7 +236,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CBPref;
-        private System.Windows.Forms.TextBox TBPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TBName;
         private System.Windows.Forms.Label label6;
@@ -242,5 +244,6 @@
         private sqlDataSetTableAdapters.UserTableAdapter UserTA;
         private sqlDataSet sqlDataSet1;
         private System.Windows.Forms.DataGridView LoginList;
+        private System.Windows.Forms.MaskedTextBox TBPhone;
     }
 }

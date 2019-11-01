@@ -45,7 +45,6 @@
             this.clientsTableAdapter = new Prog.sqlDataSetTableAdapters.ClientsTableAdapter();
             this.userBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.userBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,7 @@
             this.telephoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fotouserDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.userBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.LoginList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sqlDataSet)).BeginInit();
@@ -202,11 +202,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 11;
             // 
-            // userBindingSource2
-            // 
-            this.userBindingSource2.DataMember = "User";
-            this.userBindingSource2.DataSource = this.sqlDataSet;
-            // 
             // iduserDataGridViewTextBoxColumn
             // 
             this.iduserDataGridViewTextBoxColumn.DataPropertyName = "id_user";
@@ -255,12 +250,17 @@
             this.fotouserDataGridViewImageColumn.HeaderText = "Foto_user";
             this.fotouserDataGridViewImageColumn.Name = "fotouserDataGridViewImageColumn";
             // 
+            // userBindingSource2
+            // 
+            this.userBindingSource2.DataMember = "User";
+            this.userBindingSource2.DataSource = this.sqlDataSet;
+            // 
             // AunthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(588, 357);
+            this.ClientSize = new System.Drawing.Size(631, 429);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LoginList);
             this.Controls.Add(this.Reg);
@@ -271,6 +271,9 @@
             this.Controls.Add(this.TBEmail);
             this.Controls.Add(this.TBPass);
             this.Controls.Add(this.Aunth);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AunthForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
