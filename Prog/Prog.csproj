@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Log\AunthForm.cs">
+    <Compile Include="Login\AunthForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Log\AunthForm.Designer.cs">
+    <Compile Include="Login\AunthForm.Designer.cs">
       <DependentUpon>AunthForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Profile\FormAdmin.cs">
@@ -72,10 +72,10 @@
     <Compile Include="Profile\Realtor.Designer.cs">
       <DependentUpon>Realtor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Log\Reg.cs">
+    <Compile Include="Login\Reg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Log\Reg.Designer.cs">
+    <Compile Include="Login\Reg.Designer.cs">
       <DependentUpon>Reg.cs</DependentUpon>
     </Compile>
     <Compile Include="sqlDataSet.cs">
@@ -86,10 +86,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sqlDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Log\AunthForm.resx">
+    <EmbeddedResource Include="Login\AunthForm.resx">
       <DependentUpon>AunthForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Log\Reg.resx">
+    <EmbeddedResource Include="Login\Reg.resx">
       <DependentUpon>Reg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profile\FormAdmin.resx">
