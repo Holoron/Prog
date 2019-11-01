@@ -34,11 +34,16 @@ namespace Prog
             string Name = TBName.Text;
 
 
-            var Ema = UserTA.Email(sqlDataSet1.User, email);
-            var em 
 
-            UserTA.InserUser(email, pass, Pref, DateTime.Now, Phone, Name);
-            this.Close();
+            LoginList.DataSource = UserTA.GetEmail(email);
+            if (LoginList.RowCount >= 1)
+            {
+                MessageBox.Show("Такой пользователь уже существует");
+                return;
+            }
+
+            //UserTA.InserUser(email, pass, Pref, DateTime.Now, Phone, Name);
+            //this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -193,7 +193,6 @@
             this.LoginList.RowHeadersVisible = false;
             this.LoginList.Size = new System.Drawing.Size(190, 167);
             this.LoginList.TabIndex = 18;
-            this.LoginList.Visible = false;
             // 
             // Reg
             // 
