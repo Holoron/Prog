@@ -39,12 +39,7 @@ namespace Prog
             try
             {
 
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            
             if (string.IsNullOrWhiteSpace(TBEmail.Text))
             {
                 MessageBox.Show("Не введена почта");
@@ -75,8 +70,7 @@ namespace Prog
 
             label1.Text = TBPhone.Text;
 
-            this.LoginList.DataSource = UserTA.GetEmail(email);
-            if (LoginList.RowCount >= 1)
+            if (new sqlDataSetTableAdapters.UserTableAdapter().GetData().Where(p => p.Email == email).Count() >= 1)
             {
                 MessageBox.Show("Такой пользователь уже существует");
                 return;
@@ -85,6 +79,15 @@ namespace Prog
             UserTA.InserUser(email, pass, Pref, DateTime.Now, Phone, Name);
             MessageBox.Show("Пользователь зарегистрирован");
             this.Close();
+
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ошибка при регистрации");
+                return;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
